@@ -208,7 +208,6 @@ button:hover {
     max-width: 100%;
     padding-bottom: 30px;
     object-fit: cover;
-    vertical-align: middle;
     padding-top: 60px;
     background-size: cover;
     }
@@ -457,6 +456,13 @@ button:hover {
 @media screen and (max-width: 768px) {
     .overview-section {
         text-align: left;
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .overview-section {
+        width: 75%;
         margin-left: 0;
     }
 }
