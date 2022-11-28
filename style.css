@@ -18,6 +18,8 @@ a {
 img {
     max-width: 100%;
     height: auto;
+    border: 0;
+    vertical-align: middle;
 } 
 
 a:hover {
@@ -34,7 +36,7 @@ button:hover {
 
 .Header {
     width: 100%;
-    padding: 20px 0;
+    padding: 15px 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -43,14 +45,22 @@ button:hover {
     }
 }
 
-.header-logo {
-    width: 190px;
+@media screen and (max-width: 768px) {
+    .header-logo-image {
+    display: block;
+    height: 16px;
+    width: auto;
+    margin: 0 20px;
+    }
 }
 
-.header-logo-image {
+@media screen and (min-width: 768px) {
+    .header-logo-image {
     display: block;
     height: 20px;
     width: auto;
+    margin: 0 20px;
+    }
 }
 
 
@@ -104,6 +114,7 @@ button:hover {
     height: 100%
     }
 }
+
 @media screen and (max-width: 1080px) {
     .HeaderNavListItem__link>span:first-child {
         font-size: 16px;
@@ -200,6 +211,7 @@ button:hover {
         top: 50%;
     }
 }
+
 /* article */
 
 @media screen and (max-width: 768px) {
@@ -207,20 +219,24 @@ button:hover {
     background-image: url("https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero-sp.jpg.webp");
     max-width: 100%;
     padding-bottom: 30px;
-    object-fit: cover;
     padding-top: 60px;
     background-size: cover;
+    margin-bottom: 50%
     }
 }
-
-
 
 @media screen and (min-width: 768px) {
     .site-article {
     background-image: url("https://camp.potepan.com/wp-content/themes/potepancamp/assets/styles/../images/home/first-view/top-hero.jpg");
     background-size: cover;
-    padding-bottom: 30px;
     padding-top: 100px;
+    background-position: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .site-article {
+    padding-top: 60px;
     }
 }
 
@@ -237,7 +253,7 @@ button:hover {
 
 .main-article {
     width: fit-content;
-    margin-bottom: 70px;
+    /* margin-bottom: 70px; */
 }
 
 @media screen and (max-width: 768px) {
@@ -247,21 +263,31 @@ button:hover {
         margin: 0 auto;
         padding: 0 20px;
         width: 100%;
+        transform: translate(0, 70%);
+        margin-bottom: 70px;
     }
 }
 
 
 @media screen and (max-width: 768px) {
     .main-article > .headline-article {
-    font-size: 20px;
-    
+    font-size: 25px;
+    line-height: 36px;
     }
 }
+
 .headline-article {
     text-align: center;
     font-size: 38px;
     line-height: 54px;
 }
+
+@media screen and (min-width: 768px) {
+    .headline-article {
+        width: fit-content;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .image-article {
     margin-bottom: 25px;
@@ -275,22 +301,26 @@ button:hover {
     }
 }
 
-.point-image-article:first-child {
+@media screen and (max-width: 768px) {
+    .point-image-article:first-child {
     top: 0;
     width: 25%;
+    }
 }
 
-.point-image-article {
+@media screen and (max-width: 768px) {
+    .point-image-article {
     top: 50%;
     width: 40%;
+    }
 }
 
-.point-image-article:last-child {
+@media screen and (max-width: 768px) {
+    .point-image-article:last-child {
     top: 100%;
     width: 25%;
+    }
 }
-
-
 
 .article-button {
     display: flex;
@@ -302,8 +332,6 @@ button:hover {
     width: 306px;
     }
 }
-
-
 
 @media screen and (max-width: 768px) {
     .counseling-button {
@@ -338,7 +366,8 @@ button:hover {
 .basis-article {
     font-size: 12px;
     opacity: 0.3;
-    margin-top: 50px;
+    margin-top: 30px;
+    padding-bottom: 50px;
 }
 
 
@@ -346,7 +375,7 @@ button:hover {
 
 .introduction-section {
     background-color: #f79214;
-    padding: 44px 50px;
+    padding: 44px 50px;;
 }
 
 @media screen and (max-width: 768px) {
@@ -390,14 +419,14 @@ button:hover {
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .video-section {
-    display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
     display: block;
     margin: 0 auto;
     position: relative;
     text-align: center;
+    display: flex;
+    justify-content: center;
     }
 }
 
@@ -423,6 +452,7 @@ button:hover {
     flex-direction: column;
     width: fit-content;
 }
+
 .overview-section h2 {
     font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
     font-size: 38px;
@@ -433,7 +463,6 @@ button:hover {
     color: #fff;
     text-align: left;
 }
-
 
 .overview-section p {
     font-size: 16px;
@@ -452,7 +481,6 @@ button:hover {
     line-height: 26px;
 }
 
-
 @media screen and (max-width: 768px) {
     .overview-section {
         text-align: left;
@@ -466,7 +494,6 @@ button:hover {
         margin-left: 0;
     }
 }
-
 
 /* fixed-button */
 
